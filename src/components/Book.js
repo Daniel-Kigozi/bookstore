@@ -33,7 +33,7 @@ const Books = ({ id }) => {
 
 Books.propTypes = {
   id: PropTypes.string.isRequired,
-  
+
 };
 
 export default Books;
