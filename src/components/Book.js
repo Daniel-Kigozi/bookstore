@@ -21,7 +21,6 @@ const Books = ({ id }) => {
           <li key={book.id}>
             <h2>{book.title}</h2>
             <p>{book.author}</p>
-            <button type="button">Comments</button>
             <button type="button" onClick={handleRemoveClick}>Remove</button>
             <button type="button">Edit</button>
           </li>
@@ -34,8 +33,7 @@ const Books = ({ id }) => {
 
 Books.propTypes = {
   id: PropTypes.string.isRequired,
-  // title: PropTypes.string.isRequired,
-  // author: PropTypes.string.isRequired,
+  
 };
 
 export default Books;

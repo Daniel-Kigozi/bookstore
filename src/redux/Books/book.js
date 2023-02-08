@@ -5,8 +5,8 @@ const bookSlice = createSlice({
   initialState: [
     {
       id: 1,
-      title: 'first-book',
-      author: 'person1',
+      title: 'my-book',
+      author: 'aurthor1',
 
     },
   ],
