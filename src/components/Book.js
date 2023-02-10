@@ -28,41 +28,41 @@ const Books = () => {
             <p className="book-category">
               {book.category}
             </p>
-            <p className="book-title">
+            <p className="books-title">
               {book.title}
             </p>
             {' '}
             <p className="author">
               {book.author}
             </p>
-            <div className="button-container">
-              <button className="button" type="submit">Comments</button>
-              <button className="button" type="submit" onClick={() => deleteBookEvent(book.id)}>Remove</button>
-              <button className="button" type="submit">Edit</button>
+            <div className="buttons-container">
+              <button className="buttons" type="submit">Comments</button>
+              <button className="buttons" type="submit" onClick={() => deleteBookEvent(book.id)}>Remove</button>
+              <button className="buttons" type="submit">Edit</button>
             </div>
           </div>
-          <section>
-            <div>
+          <section className="progressive">
+            <div className="progressive-success">
               <CircularProgressbar value={value} />
             </div>
-            <div>
-              <div>
-                <p>
+            <div className="info-status">
+              <div className="progression-info">
+                <p className="progression">
                   {value}
                   %
                 </p>
-                <p>Completed</p>
+                <p className="progress-status">Completed</p>
               </div>
             </div>
           </section>
-          <div>
-            <p>CURRENT CHAPTER</p>
-            <p>
+          <div className="chapters">
+            <p className="chapter-now">CURRENT CHAPTER</p>
+            <p className="chapter-digit">
               CHAPTER :
               {' '}
               {chapter}
             </p>
-            <button type="submit">UPDATE PROGRESS</button>
+            <button className="continue-button" type="submit">UPDATE PROGRESS</button>
           </div>
         </section>
       ))}
