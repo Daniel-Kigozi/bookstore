@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import { getBooks, deleteBook } from '../redux/Books/book';
+import 'react-circular-progressbar/dist/styles.css';
 import BooksForm from './BookForm';
 
 const Books = () => {

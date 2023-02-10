@@ -8,11 +8,11 @@
 body {
   display: flex;
   align-items: center;
-  margin: 200px 200px;
+  margin: 100px 100px;
   background-color: #fafafa;
-  padding: 20px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  padding: 10px 0;
 }
 
 header {
@@ -20,6 +20,9 @@ header {
   flex-direction: row;
   border-bottom: solid 1px #e8e8e8;
   box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  padding-left: 130px;
+  width: 88%;
+  margin: 0;
 }
 
 .nav-items {
@@ -82,12 +85,11 @@ header {
 .book {
   display: flex;
   flex-direction: row;
-  margin-bottom: 13px;
-  margin-top: 50px;
   width: 80%;
-  border: solid 1px #e8e8e8;
+  border: solid 1px #f2eeee;
   background-color: white;
   padding: 10px 0 50px 0;
+  margin: 20px auto;
 }
 
 .book-info {
@@ -135,7 +137,7 @@ hr {
   border: solid 1px #e8e8e8;
 }
 
-.auth {
+.author {
   width: 6.688rem;
   height: 1.188rem;
   margin: 0.25rem 0 0;
@@ -248,6 +250,7 @@ hr {
 form {
   display: flex;
   flex-direction: row;
+  margin-left: 90px;
 }
 
 input {
@@ -273,7 +276,7 @@ input {
 .form-head {
   width: 14rem;
   height: 1.5rem;
-  margin: 1.813rem 32.75rem 1.188rem 0;
+  margin: 1.813rem 32.75rem 1.188rem 6.2rem;
   font-family: Montserrat, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
@@ -363,4 +366,21 @@ header h1 {
   display: flex;
   color: #0088f0;
   font-size: 36px;
+}
+
+.nav-title {
+  margin: auto 20px;
+}
+
+.category-nav {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.userIcon {
+  font-size: 25px;
+  color: #0290ff;
+  position: absolute;
+  right: 210px;
+  top: 150px;
 }
