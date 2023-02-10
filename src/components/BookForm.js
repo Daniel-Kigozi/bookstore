@@ -1,30 +1,66 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/Books/book';
+import uuid from 'react-uuid';
+import { postBook } from '../redux/Books/book';
 
 const BookForm = () => {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const initialBook = {
+    item_id: '',
+    title: '',
+    author: '',
+    category: '',
+  };
+  const [bookState, setBookState] = useState(initialBook);
   const dispatch = useDispatch();
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if (title === '' || author === '') return;
-    const newBook = {
-      title,
-      author,
-    };
-    dispatch(addBook(newBook));
-    setAuthor('');
-    setTitle('');
+  const OnChange = (event) => {
+    const { name, value } = event.target;
+    setBookState({ ...bookState, [name]: value });
+  };
+
+  const Submit = () => {
+    const book = { ...bookState, item_id: uuid() };
+    dispatch(postBook(book));
+    setBookState(initialBook);
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Book Title" />
-      <input value={author} onChange={(e) => setAuthor(e.target.value)} type="text" placeholder="Author" />
-      <button type="submit">Add Book</button>
-    </form>
+    <section className="Form">
+      <span className="form-title">ADD A NEW BOOK</span>
+      <form>
+        <input
+          type="text"
+          name="title"
+          value={bookState.title}
+          placeholder="Book Title"
+          onChange={OnChange}
+        />
+        <input
+          type="text"
+          name="author"
+          value={bookState.author}
+          placeholder="Author"
+          onChange={OnChange}
+        />
+        <select
+          className="cat"
+          placeholder="categories"
+          name="category"
+          value={bookState.category}
+          onChange={OnChange}
+          required
+        >
+          <option value="">Category</option>
+          <option value="Fiction">Science</option>
+          <option value="Gospel">Geophysics</option>
+          <option value="Math">Technology</option>
+
+        </select>
+        <button className="add-button" type="button" onClick={Submit}>
+          Add Book
+        </button>
+      </form>
+    </section>
   );
 };
 
