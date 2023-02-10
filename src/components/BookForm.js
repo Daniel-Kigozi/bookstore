@@ -26,7 +26,7 @@ const BookForm = () => {
 
   return (
     <section className="Form">
-      <span className="form-title">ADD A NEW BOOK</span>
+      <span className="form-head">ADD A NEW BOOK</span>
       <form>
         <input
           type="text"
@@ -43,7 +43,7 @@ const BookForm = () => {
           onChange={OnChange}
         />
         <select
-          className="cat"
+          className="categ-ory"
           placeholder="categories"
           name="category"
           value={bookState.category}
@@ -51,9 +51,9 @@ const BookForm = () => {
           required
         >
           <option value="">Category</option>
-          <option value="Fiction">Science</option>
-          <option value="Gospel">Geophysics</option>
-          <option value="Math">Technology</option>
+          <option value="Science">Science</option>
+          <option value="Geophysics">Geophysics</option>
+          <option value="Technology">Technology</option>
 
         </select>
         <button className="add-button" type="button" onClick={Submit}>

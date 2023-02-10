@@ -1,27 +1,386 @@
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --logocolor: #0290ff;
+  --textcolor: #121212;
+  --secondcolor: #4386bf;
+  --progresscolor: #e8e8e8;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+body {
+  display: flex;
+  align-items: center;
+  margin: 100px 100px;
+  background-color: #fafafa;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px #e8e8e8;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  padding-left: 130px;
+  width: 88%;
+  margin: 0;
+}
+
+.nav-items {
+  margin: 29px 30px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--textcolor);
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1rem 2.563rem 0.688rem 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+}
+
+#logo {
+  width: 15rem;
+  height: 2.313rem;
+  margin: 1.5rem 2.938rem 0.125rem 8rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--logocolor);
+}
+
+.logo-section {
+  width: 2.813rem;
+  height: 2.813rem;
+  margin: 1.2rem 0 0 27.4rem;
+  padding: 0;
+  border: solid 1px #e8e8e8;
+  border-radius: 30px;
+}
+
+.user-icon {
+  position: relative;
+  top: 0.8rem;
+  left: 0.85rem;
+  color: var(--logocolor);
+}
+
+.single-book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  border: solid 1px #f2eeee;
+  background-color: white;
+  padding: 10px 0 50px 0;
+  margin: 20px auto;
+}
+
+.book-info {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 9px;
+  margin-left: 13px;
+  padding: 15px;
+}
+
+.book-category {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.books-title {
+  width: 25rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+hr {
+  width: 60%;
+  align-items: center;
+  border: solid 1px #e8e8e8;
+}
+
+.author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.buttons-container {
+  margin-left: 3px;
+  margin-top: 13px;
+}
+
+.buttons {
+  background-color: white;
+  border: none;
+  color: var(--secondcolor);
+  border-right: solid 1px #e8e8e8;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.chapters {
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.chapter-now {
+  color: var(--textcolor);
+  width: 90%;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.chapter-digit {
+  color: var(--textcolor);
+  font-size: 15px;
+  font-family: "RobotoSlab", sans-serif;
+}
+
+.continue-button {
+  color: white;
+  background-color: var(--logocolor);
+  border: none;
+  width: 10rem;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.add-button {
+  color: white;
+  background-color: var(--logocolor);
+  border: none;
+  width: 50%;
+  height: 3.4rem;
+  margin-top: 20px;
+  border-radius: 2px;
+  margin-left: 130px;
+  cursor: pointer;
+}
+
+.progressive {
+  width: 25%;
+  height: 25%;
+  margin-left: 14rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: 34px;
+}
+
+.progressive-success {
+  position: relative;
+  width: 25%;
+  height: 25%;
+  margin-top: 13px;
+}
+
+.progression-info {
+  width: 4.25rem;
+  height: 2.438rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.Form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 8.2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  margin-left: 90px;
+}
+
+input {
+  width: 60%;
+  height: 50%;
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 20px 30px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.categ-ory {
+  width: 19rem;
+  height: 3.4rem;
+  margin: 1.188rem 2.125rem 0;
+  padding: 0.375rem 0.938rem 0.563rem 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.form-head {
+  width: 14rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 6.2rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: grey;
+}
+
+.status-text {
+  width: 10.875rem;
+  height: 1.5rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  color: grey;
+}
+
+.status-button {
+  color: white;
+  background-color: var(--logocolor);
+  border: none;
+  width: 10%;
+  height: 3.4rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.progress-status {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.info-status {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 13px;
+  width: 50%;
+  border-right: solid 1px #e8e8e8;
+}
+
+.progression {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.1rem 5.75rem 0 0.688rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  margin-top: 60px;
+  background-color: #fff;
+  padding: 5px 0 0 20px;
+  position: relative;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: gray;
+}
+
+header h1 {
+  display: flex;
+  color: #0088f0;
+  font-size: 36px;
+}
+
+.nav-title {
+  margin: auto 20px;
+}
+
+.category-nav {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.userIcon {
+  font-size: 25px;
+  color: #0290ff;
+  position: absolute;
+  right: 210px;
+  top: 150px;
 }
